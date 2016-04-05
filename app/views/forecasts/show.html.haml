@@ -1,0 +1,26 @@
+%h1.title
+  Forecast for
+  %span.title__city= @city
+  on
+  %span.title__date= Time.at(@timestamp).to_s :forecast_day
+
+- if @forecast
+  %ul.forecast-detail
+    - if @forecast.description
+      %li= @forecast.description.capitalize
+    %li= "Temperature: #{@forecast.temperature}°"
+    %li= "Min temperature: #{@forecast.min_temperature}°"
+    %li= "Max temperature: #{@forecast.max_temperature}°"
+    %li= "Night temperature: #{@forecast.night_temperature}°"
+    %li= "Evening temperature: #{@forecast.evening_temperature}°"
+    %li= "Morning temperature: #{@forecast.morning_temperature}°"
+    %li= "Pressure: #{@forecast.pressure} hPa"
+    %li= "Humidity: #{@forecast.humidity}%"
+    %li= "Wind speed: #{@forecast.wind_speed} m/s"
+    %li= "Wind direction: #{@forecast.wind_direction}°"
+    %li= "Cloudiness: #{@forecast.cloudiness}%"
+- else
+  .error
+    Unable to get forecast data. OpenWeatherMap might be down or your query might have failed.
+
+= link_to "<< Forecast for #{@city}", forecasts_path(city: @city), class: 'back-link'

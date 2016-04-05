@@ -1,0 +1,12 @@
+%h1.title
+  Forecast for
+  %span.title__city= @city
+
+- if @forecasts
+  .forecasts
+    = render @forecasts
+- else
+  .error
+    Unable to get forecast data. OpenWeatherMap might be down or your query might have failed.
+
+= link_to '<< New query', root_path, class: 'back-link'

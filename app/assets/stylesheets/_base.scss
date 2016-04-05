@@ -1,10 +1,43 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 75px;
+}
+
 .title {
   font-family: sans-serif;
   font-size: 32px;
   margin: 10px;
 }
 
-.title__city {
+.title__city, .title__date {
   font-weight: bold;
   color: cornflowerblue;
+}
+
+.error {
+  margin: 10px;
+  color: red;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.back-link {
+  margin: 10px;
+  font-family: sans-serif;
+  color: cornflowerblue;
+  text-decoration: none;
+
+  &:visited {
+    color: cornflowerblue;
+    text-decoration: none;
+  }
+
+  &:hover, &:focus {
+    color: cornflowerblue;
+    text-decoration: underline;
+  }
 }

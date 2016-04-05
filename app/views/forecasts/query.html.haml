@@ -1,0 +1,4 @@
+= form_tag forecasts_url, method: :get, class: 'forecast-form' do
+  = text_field_tag :city, nil, class: 'forecast-form__city', required: true, placeholder: 'Enter city'
+  %br
+  = submit_tag 'Get forecast', class: 'forecast-form__submit'

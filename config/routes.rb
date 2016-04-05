@@ -54,7 +54,11 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'forecasts#new'
+  root 'forecasts#query'
 
-  resources :forecasts, only: [:new, :create, :show]
+  resources :forecasts, only: [:index, :show], param: :city do
+    collection do
+      get :query
+    end
+  end
 end

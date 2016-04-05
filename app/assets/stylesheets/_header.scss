@@ -1,0 +1,23 @@
+.header {
+  background: cornflowerblue;
+  text-align: center;
+  font-size: 32px;
+  font-family: sans-serif;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.header__link {
+  color: white;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover, &:active {
+    color: white;
+    text-decoration: underline;
+  }
+}

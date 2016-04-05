@@ -1,0 +1,17 @@
+.forecast-form {
+  text-align: center;
+}
+
+.forecast-form__city, .forecast-form__submit {
+  font-size: 26px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.forecast-form__city {
+  margin-bottom: 10px;
+}
+
+.forecast-form__submit {
+  cursor: pointer;
+}

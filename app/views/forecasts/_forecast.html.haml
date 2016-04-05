@@ -1,7 +1,14 @@
-.forecast
+= link_to forecast_path(city: @city, timestamp: forecast.timestamp), class: 'forecast' do
   .forecast__title
     = forecast.created_at.to_s :forecast_day
-  .forecast_temperature
-    = "#{forecast.temperature.to_i}°"
-  .forecast_humidity
+  .forecast__temperature
+    = "#{forecast.temperature}°"
+  - if forecast.description
+    .forecast__description
+      = forecast.description.capitalize
+  .forecast__minmax
+    = "#{forecast.min_temperature}° - #{forecast.max_temperature}°"
+  .forecast__humidity
     = "Humidity: #{forecast.humidity}%"
+  .forecast__wind-speed
+    = "Wind speed: #{forecast.wind_speed} m/s"

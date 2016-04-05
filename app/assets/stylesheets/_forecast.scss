@@ -1,11 +1,13 @@
 .forecast {
   display: inline-block;
+  vertical-align: top;
   width: 150px;
   height: 200px;
   color: white;
   margin: 5px;
-  padding: 2px;
+  padding: 5px;
   font-family: sans-serif;
+  text-decoration: none;
 
   &:nth-child(7n+1) {
     background: darkmagenta;
@@ -37,12 +39,24 @@
 }
 
 .forecast__title {
+  font-size: 20px;
   text-align: center;
   margin: 10px 0;
 }
 
 .forecast__temperature {
+  font-size: 32px;
+  margin: 15px 0 5px 0;
+}
+
+.forecast__minmax {
+  margin: 15px 0 5px 0;
 }
 
 .forecast__humidity {
+  margin-bottom: 5px;
+}
+
+.forecast__description {
+  font-size: 24px;
 }

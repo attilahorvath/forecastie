@@ -1,21 +1,14 @@
 class ForecastsController < ApplicationController
-  def new
-    @forecast = Forecast.new
-  end
+  def index
+    @city = params[:city]
 
-  def create
-    @forecast = Forecast.new forecast_params
-    @forecasts = @forecast.fetch_many!
+    @forecasts = Forecast.fetch! city: @city
   end
 
   def show
-    @forecast = Forecast.new forecast_params
-    @forecast.fetch!
-  end
+    @city = params[:city]
+    @timestamp = params[:timestamp].to_i
 
-  private
-
-  def forecast_params
-    params[:forecast].permit(:city)
+    @forecast = Forecast.fetch_one! city: @city, timestamp: @timestamp
   end
 end
