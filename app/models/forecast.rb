@@ -52,7 +52,7 @@ class Forecast
 
   def self.get_forecast_hash(options = {})
     count = options[:count] || 1
-    city = options[:city]
+    city = options[:city] || 'Dublin, IE'
 
     begin
       OpenWeather::ForecastDaily.city(city, units: 'metric', cnt: count, APPID: Rails.application.secrets.open_weather_appid)
