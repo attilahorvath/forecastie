@@ -1,0 +1,48 @@
+.forecast {
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  color: white;
+  margin: 5px;
+  padding: 2px;
+  font-family: sans-serif;
+
+  &:nth-child(7n+1) {
+    background: darkmagenta;
+  }
+
+  &:nth-child(7n+2) {
+    background: firebrick;
+  }
+
+  &:nth-child(7n+3) {
+    background: darkorange;
+  }
+
+  &:nth-child(7n+4) {
+    background: indianred;
+  }
+
+  &:nth-child(7n+5) {
+    background: lightslategray;
+  }
+
+  &:nth-child(7n+6) {
+    background: midnightblue;
+  }
+
+  &:nth-child(7n+0) {
+    background: cornflowerblue;
+  }
+}
+
+.forecast__title {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.forecast__temperature {
+}
+
+.forecast__humidity {
+}

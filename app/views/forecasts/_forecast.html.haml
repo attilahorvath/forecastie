@@ -1,0 +1,7 @@
+.forecast
+  .forecast__title
+    = forecast.created_at.to_s :forecast_day
+  .forecast_temperature
+    = "#{forecast.temperature.to_i}°"
+  .forecast_humidity
+    = "Humidity: #{forecast.humidity}%"
