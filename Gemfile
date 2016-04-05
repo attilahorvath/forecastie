@@ -44,6 +44,8 @@ group :development, :test do
   gem 'byebug'
 
   gem 'rake'
+
+  gem 'webmock'
 end
 
 group :development do

@@ -21,8 +21,6 @@ class Forecast
 
     return nil unless hash
 
-    puts hash
-
     list = hash['list']
     list = list.select{ |item| item['dt'] == options[:timestamp] } if list && options[:timestamp]
 
