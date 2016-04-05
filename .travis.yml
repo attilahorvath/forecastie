@@ -1,1 +1,10 @@
 language: ruby
+deploy:
+  provider: openshift
+  user: hun.ati500@gmail.com
+  password:
+    secure: Q7N5e8F1JpEM7snifKU/94XpBCqlNZoEGAecp39vVOxBqXnbczEMw1Krm3vdJRLzZb5GRVFq+9FqLUbmDHJ/efSMhsmzOeqEoWV0iDeNwCQohqYigjWbQeqmDJaZ8Aa7G8pGnzps7bqUsimy9FZWHrUNiaEtqBEAkVmHvySzPwpABMhQ3qxjBxh/7KEpp0SrY3RoZwun8G51p/pc09ypXrOYabe9FDzwaE8ukkdlkpk+xLql97cUPR4woxwgo0gY6AxBrQIcz/VfXYrakBgHR9sgLO3GXgjdqwZSUBiPnzWMavcCKkktfRy+38+XamyP8+SyV6SFHJOzLJSareCypQa7wgvkF4tcmiW9ZTk7kmuge3SvbjJp50S0QRCDohksCa0Qh7Y8VDqY2PzJfaXymBvS/VRMXn/nX7xKQ94iBJVdlvIbWSPKfAhucgRG5LsI0H4VWqLtqNcXKbsT5YF/2o1B5BiBlxC0pE80gU/QRMcB5YwyHAUNL3dvZPiE25mxGQmQUrq0QV0tXy6MsP12e4sYwgXoY8r64WAFf8K921Q0vTFNVJo62QqTK6tYdGXM0OVe/tu81GwHMnUzR0UIcduIJGXjghFAyz7JtVS/BkTcAjxNNE18Jj4kvGlUv+xDoG4GI+ZgdjHf/uPa8/3sVZ9oZarL+I/uAAND1GdGCtI=
+  app: forecastie
+  domain: attilahorvath
+  on:
+    repo: attilahorvath/forecastie
