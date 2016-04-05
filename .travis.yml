@@ -1,4 +1,8 @@
 language: ruby
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database forecastie_test;' -U postgres
 deploy:
   provider: openshift
   user: hun.ati500@gmail.com
