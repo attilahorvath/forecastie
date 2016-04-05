@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: forecastie_production
-  username: forecastie
-  password: <%= ENV['FORECASTIE_DATABASE_PASSWORD'] %>
+  host: <%= ENV['OPENSHIFT_POSTGRESQL_DB_HOST'] %>
+  port: <%= ENV['OPENSHIFT_POSTGRESQL_DB_PORT'] %>
+  database: forecastie
+  username: <%= ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME'] %>
+  password: <%= ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD'] %>
